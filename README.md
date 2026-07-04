@@ -1,23 +1,39 @@
-# 🛍️ Eros - Loja Virtual de Roupas
+# 🛍️ Eros — E-commerce de Roupas
 
-O **Eros** é uma plataforma de e-commerce moderna e intuitiva voltada para o comércio de roupas e moda. O foco principal deste repositório é o desenvolvimento da **interface e experiência do usuário (Front-end)**, trazendo um design elegante, responsivo e um fluxo de navegação fluido.
-
-> ⚠️ **Nota:** Este projeto é atualmente uma aplicação **exclusivamente Front-end**. Toda a estilização e estrutura de componentes visuais foram desenvolvidas utilizando apenas HTML estrutural e utilitários do Tailwind CSS. Os dados de produtos e interações são estáticos/simulados.
+A **Eros** é uma plataforma de e-commerce voltada para o setor de moda e vestuário, projetada para oferecer uma experiência de compra fluida, intuitiva e moderna. O projeto une um design sofisticado a uma arquitetura funcional, focando em usabilidade e performance.
 
 ---
 
-## 🚀 Funcionalidades da Interface
+## 🚀 Sobre o Projeto
 
-* **Catálogo de Produtos:** Visualização de roupas com filtros visuais por categoria, tamanho e preço baseados em classes utilitárias.
-* **Carrinho de Compras Interativo:** Layout completo e estruturado para exibição e gerenciamento visual de itens no carrinho.
-* **Páginas de Detalhes:** Organização visual limpa para exibição das peças, especificações, tamanhos disponíveis e imagens.
-* **Fluxo de Checkout Visível:** Telas e formulários estilizados para simular o processo de finalização de compra de ponta a ponta.
-* **Design Totalmente Responsivo:** Interface perfeitamente adaptada para celulares, tablets e computadores usando o sistema de breakpoints do Tailwind CSS.
+O objetivo principal da Eros é simular um ambiente real de comércio eletrônico, permitindo a navegação por categorias de roupas, visualização detalhada de produtos e um fluxo de carrinho otimizado. 
+
+Este projeto foi desenvolvido com foco em aplicar conceitos consolidados de:
+- **UI/UX Design:** Interface limpa, responsiva e focada na jornada do usuário.
+- **Desenvolvimento Front-end:** Estruturação de componentes modernos e interativos.
+- **Gerenciamento de Estado:** Controle eficiente de ações como adicionar itens ao carrinho e aplicar filtros.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Estrutura:** HTML5 Semântico
-* **Estilização & Layout:** [Tailwind CSS](https://tailwindcss.com/) (Classes utilitárias, Flexbox, Grid e Responsividade)
-* **Ícones / Vetores:** [Lucide Icons](https://lucide.dev/) / FontAwesome *(ajuste se usou outra biblioteca de ícones)*
+### 🎨 Design & Prototipagem
+- **Figma:** Criação do protótipo de alta fidelidade, definição do guia de estilos (cores, tipografia) e componentes de UI.
+
+### 💻 Desenvolvimento Front-end
+- **HTML5 & CSS3:** Estruturação semântica e estilização moderna (Layouts responsivos, Flexbox/Grid).
+- **JavaScript (ES6+):** Lógica de interatividade, manipulação do DOM e gerenciamento do carrinho.
+
+---
+
+## 📌 Funcionalidades Principais
+
+- 📱 **Design Totalmente Responsivo:** Adaptado para smartphones, tablets e desktops.
+- 🔍 **Filtro de Produtos:** Navegação facilitada por categorias ou coleções de roupas.
+- 🛒 **Carrinho Dinâmico:** Adição, remoção e atualização da quantidade de itens em tempo real.
+- 🖼️ **Galeria de Destaques:** Exibição em alta definição das principais peças e coleções.
+
+---
+<p align="center">
+  <i>Desenvolvido por Júlio Cezar 💻</i>
+</p>
