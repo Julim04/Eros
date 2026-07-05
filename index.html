@@ -10,8 +10,12 @@
 </head>
 
 <body>
-    <header class="bg-[#002B0C] text-white p-2">
-        <img src="/img/1.png" alt="" class="h-20 w-15 mx-auto">
+    <header class="bg-[#002B0C] text-white p-2 relative">
+        <div class="absolute top-8 left-4">
+            <label for="site-search" class="text-sm tracking-wide block"></label>
+            <input id="site-search" type="text" placeholder="Buscar" class="bg-transparent border-0 border-b border-white text-white text-sm outline-none placeholder:text-white/70 w-32 pb-1">
+        </div>
+        <img src="/img/Eros.png" alt="" class="h-36 w-30 mx-auto">
         <nav>
             <ul class="flex space-x-4 justify-center mt-2 text-decoration-none">
                 <li><a href="#" class="px-3 py-2 rounded-full transition-all duration-300 hover:bg-white hover:text-[#002B0C]">Início</a></li>
@@ -193,6 +197,23 @@
 
         </div>
     </main>
+
+    <script>
+        const searchInput = document.getElementById('site-search');
+        const productCards = document.querySelectorAll('main figure');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.trim().toLowerCase();
+
+                productCards.forEach((card) => {
+                    const text = card.textContent.toLowerCase();
+                    const shouldShow = !query || text.includes(query);
+                    card.style.display = shouldShow ? '' : 'none';
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
