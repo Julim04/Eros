@@ -7,213 +7,192 @@
     <title>Eros</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="/img/2.png" class="rounded-full">
+
 </head>
 
-<body>
-    <header class="bg-[#002B0C] text-white p-2 relative">
-        <div class="absolute top-8 left-4">
-            <label for="site-search" class="text-sm tracking-wide block"></label>
-            <input id="site-search" type="text" placeholder="Buscar" class="bg-transparent border-0 border-b border-white text-white text-sm outline-none placeholder:text-white/70 w-32 pb-1">
+<body class="bg-[#F5F5F5]">
+    <header class="sticky top-0 z-50 bg-[#F5F5F5]/95 backdrop-blur-sm shadow-sm">
+        <!-- A div pai controla o alinhamento vertical e cria o contexto de posicionamento -->
+        <div class="relative flex items-center justify-center p-4 min-h-[80px] w-full">
+
+            <!-- Div do Input (Posicionada de forma absoluta na esquerda) -->
+            <div class="absolute left-4 flex items-center">
+                <!-- Escondi o label visualmente com sr-only para manter a acessibilidade sem quebrar o design -->
+                <label for="Busca" class="sr-only">Busca</label>
+
+                <!-- Adicionei as classes para deixar o input arredondado e com a borda sutil igual à imagem -->
+                <div class="relative">
+                    <input type="text" id="Busca" placeholder="Buscar peças..."
+                        class="pl-10 pr-4 py-2 border border-[#002B0C]/20 rounded-full focus:outline-none focus:border-[#002B0C] bg-transparent text-sm w-64 text-[#002B0C]">
+
+                    <!-- Ícone de lupa opcional (caso queira idêntico à imagem) -->
+                    <span class="absolute left-3 top-2.5 text-[#002B0C]/60">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.3-4.3" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Div do Título (Fica perfeitamente no centro da tela) -->
+            <div>
+                <h1 class="text-4xl font-semibold tracking-tight text-[#002B0C]">eros</h1>
+            </div>
+
         </div>
-        <img src="/img/Eros.png" alt="" class="h-36 w-30 mx-auto">
-        <nav>
-            <ul class="flex space-x-4 justify-center mt-2 text-decoration-none">
-                <li><a href="#" class="px-3 py-2 rounded-full transition-all duration-300 hover:bg-white hover:text-[#002B0C]">Início</a></li>
-                <li><a href="#" class="px-3 py-2 rounded-full transition-all duration-300 hover:bg-white hover:text-[#002B0C]">Sobre</a></li>
-                <li><a href="#" class="px-3 py-2 rounded-full transition-all duration-300 hover:bg-white hover:text-[#002B0C]">Contato</a></li>
-                <li><a href="#" class="px-3 py-2 rounded-full transition-all duration-300 hover:bg-white hover:text-[#002B0C]">Produtos</a></li>
-                <li><a href="#" class="px-3 py-2 rounded-full transition-all duration-300 hover:bg-white hover:text-[#002B0C]">Camisas</a></li>
-            </ul>
-        </nav>
+        <ul class="flex justify-center gap-4 text-[#002B0C] text-lg font-medium p-4">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
     </header>
     <main>
-        <div class="grid grid-cols-4 gap-6 p-4 mx-auto max-w-6xl">
-            <!-- Produto 1 -->
-            <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <!-- Imagem padrão -->
-                    <img src="/img/Clothes.jpg" alt="Produto 1"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <!-- Imagem hover -->
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 1 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <figcaption class="p-3 relative">
-                        Nome da Roupa
-                        <p>$$$</p>
-                        <a href="">
-                            <img src="https://img.icons8.com/?size=100&id=Knsy1P7TC2mx&format=png&color=000000"
-                                alt="Ícone do carrinho de compras"
-                                class="w-6 h-6 absolute top-8 right-4 cursor-pointer" />
-                        </a>
-                    </figcaption>
-                </figure>
-            </div>
+        <!-- Banner principal ajustado com alinhamento à esquerda, espaçamento interno (padding) generoso e texto claro -->
+        <div
+            class="bg-[url('/img/moletom-preto-m3.jpg')] bg-cover bg-center bg-no-repeat flex flex-col justify-center items-start p-12 md:p-24 min-h-[600px] w-[600px] text-[#FEF9E7]">
 
-            <!-- Produto 2 -->
-            <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <img src="/img/Clothes.jpg" alt="Produto 2"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 2 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <figcaption class="p-3 relative">
-                        Nome da Roupa
-                        <p>$$$</p>
-                        <a href="">
-                            <img src="https://img.icons8.com/?size=100&id=Knsy1P7TC2mx&format=png&color=000000"
-                                alt="Ícone do carrinho de compras"
-                                class="w-6 h-6 absolute top-8 right-4 cursor-pointer" />
-                        </a>
-                    </figcaption>
-                </figure>
-            </div>
+            <!-- Label: Letras maiúsculas, fundo bege claro, texto escuro, tracking amplo (0.2em) -->
+            <span
+                class="bg-[#FEF9E7] text-[#333] font-sans text-xs uppercase tracking-wide-label px-3 py-1.5 mb-6 font-medium">
+                Primeira Coleção · 2026
+            </span>
 
-            <!-- Produto 3 -->
-            <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <img src="/img/Clothes.jpg" alt="Produto 3"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 3 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <figcaption class="p-3 relative">
-                        Bogote
-                        <p>400</p>
-                        <a href="">
-                            <img src="https://img.icons8.com/?size=100&id=Knsy1P7TC2mx&format=png&color=000000"
-                                alt="Ícone do carrinho de compras"
-                                class="w-6 h-6 absolute top-8 right-4 cursor-pointer" />
-                        </a>
-                    </figcaption>
-                </figure>
-            </div>
+            <!-- Título Grande: Poppins semibold, colado/compacto (tracking-tight), linhas próximas (leading) -->
+            <h1 class="font-sans font-semibold text-5xl md:text-7xl tracking-tight leading-[1.05] max-w-2xl mb-6">
+                Presença em<br>cada detalhe
+            </h1>
 
-            <!-- Produto 4 -->
-            <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <img src="/img/Clothes.jpg" alt="Produto 4"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 4 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <figcaption class="p-3 relative">
-                        Nome da Roupa
-                        <p>$$$</p>
-                        <a href="">
-                            <img src="https://img.icons8.com/?size=100&id=Knsy1P7TC2mx&format=png&color=000000"
-                                alt="Ícone do carrinho de compras"
-                                class="w-6 h-6 absolute top-8 right-4 cursor-pointer" />
-                        </a>
-                    </figcaption>
-                </figure>
+            <!-- Texto de apoio: Serifado (Lora), totalmente em itálico, com leitura suave -->
+            <p class="font-serif italic text-lg md:text-xl text-[#FEF9E7]/90 max-w-xl leading-relaxed mb-10">
+                Peças atemporais em algodão premium, com caimento impecável e acabamento cuidado. Elegância que veste o
+                dia a dia.
+            </p>
+
+            <!-- Bloco de CTAs (Botões): Alinhados na horizontal com espaçamento entre eles -->
+            <div class="flex flex-wrap gap-4 w-full">
+
+                <!-- Botão Principal (Comprar Agora): Fundo sólido bege, texto escuro, maiúsculo com tracking amplo (0.25em) -->
+                <a href="#"
+                    class="inline-flex items-center justify-center bg-[#FEF9E7] text-[#1a1a1a] font-sans font-medium text-sm uppercase tracking-wide-cta px-8 py-4 transition hover:bg-[#FEF9E7]/90">
+                    Comprar Agora
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-move-right ml-2">
+                        <path d="M18 8L22 12L18 16" />
+                        <path d="M2 12H22" />
+                    </svg>
+                </a>
+
+                <!-- Botão Secundário (Ver Coleção): Transparente com borda fina, texto maiúsculo e mesmo tracking amplo -->
+                <a href="#"
+                    class="inline-flex items-center justify-center border border-[#FEF9E7]/60 text-[#FEF9E7] font-sans font-medium text-sm uppercase tracking-wide-cta px-8 py-4 transition hover:bg-[#FEF9E7]/10">
+                    Ver Coleção
+                </a>
+
             </div>
         </div>
-        <div class="grid grid-cols-4 gap-6 p-4 mx-auto max-w-6xl">
-            <!-- Produto 1 -->
-            <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <!-- Imagem padrão -->
-                    <img src="/img/Clothes.jpg" alt="Produto 1"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <!-- Imagem hover -->
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 1 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <figcaption class="p-3 relative">
-                        Nome da Roupa
-                        <p>$$$</p>
-                    </figcaption>
-                </figure>
+        <div class="bg-[#002B0C] flex justify-center gap-20 py-4">
+            <div class="mr-8">
+                <p class="text-center text-[#FEF9E7] text-base font-medium">Frete Grátis</p>
+                <p class="text-center text-[#FEF9E7] text-xs">ACIMA DE R$299</p>
+            </div>
+            <div class="mr-8">
+                <p class="text-center text-[#FEF9E7] text-base font-medium">ATÉ 4X SEM JUROS</p>
+                <p class="text-center text-[#FEF9E7] text-xs">NO CARTÃO</p>
+            </div>
+            <div class="mr-8">
+                <p class="text-center text-[#FEF9E7] text-base font-medium">ENTREGA PARA TODO O BRASIL</p>
             </div>
             <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <!-- Imagem padrão -->
-                    <img src="/img/Clothes.jpg" alt="Produto 1"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <!-- Imagem hover -->
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 1 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <figcaption class="p-3 relative">
-                        Nome da Roupa
-                        <p>$$$</p>
-                    </figcaption>
-                </figure>
+                <p class="text-center text-[#FEF9E7] text-base font-medium">COMPRA SEGURA</p>
+                <p class="text-center text-[#FEF9E7] text-xs">Todo processo de compra pelo WhatsApp Oficial</p>
             </div>
-            <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <!-- Imagem padrão -->
-                    <img src="/img/Clothes.jpg" alt="Produto 1"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <!-- Imagem hover -->
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 1 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-                    <figcaption class="p-3 relative">
-                        Nome da Roupa
-                        <p>$$$</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <!-- Imagem padrão -->
-                    <img src="/img/Clothes.jpg" alt="Produto 1"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <!-- Imagem hover -->
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 1 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <figcaption class="p-3 relative">
-                        Nome da Roupa
-                        <p>$$$</p>
-                        <a href="">
-                            <img src="https://img.icons8.com/?size=100&id=Knsy1P7TC2mx&format=png&color=000000"
-                                alt="Ícone do carrinho de compras"
-                                class="w-6 h-6 absolute top-8 right-4 cursor-pointer" />
-                        </a>
-                    </figcaption>
-                </figure>
-            </div>
-            <div>
-                <figure class="border border-black rounded-3xl overflow-hidden relative group">
-                    <!-- Imagem padrão -->
-                    <img src="/img/Clothes.jpg" alt="Produto 1"
-                        class="w-full h-[449px] object-contain border border-white transition-opacity duration-300 group-hover:opacity-0" />
-                    <!-- Imagem hover -->
-                    <img src="/img/jovem-medieval-fantasia-antiga-fingimento-retrato-de-um-em-roupas-vintage-fundo-escuro-modelo-masculino-como-pessoa-real-do-172213651.webp"
-                        alt="Produto 1 - hover"
-                        class="w-full h-[449px] object-contain border border-white absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <figcaption class="p-3 relative">
-                        Nome da Roupa
-                        <p>$$$</p>
-                    </figcaption>
-                </figure>
-            </div>
-
-
         </div>
+        <section class="p-8">
+            <p class="text-[#002B0C] text-xl font-semibold">OS QUERIDINHOS</p>
+            <h2 class="text-[#002B0C] text-4xl font-bold">Primeira Coleção</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 justify-items-center">
+                <!-- Produto 1 -->
+                <div class="w-[250px] group">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="/img/blusa manga longa preta.jpg" alt="Blusa Manga Longa Preta"
+                            class="w-[250px] h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-0 left-0 w-full bg-[#002B0C] text-[#FEF9E7] font-sans font-medium text-xs tracking-wide-label uppercase py-3.5 transition-all duration-300 transform translate-y-full invisible group-hover:visible group-hover:translate-y-0 group-hover:bg-[#002B0C]/90">Ver
+                            Produto</button>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p class="text-[#002B0C] font-bold">Blusa Manga Longa Preta</p>
+                        <h3 class="text-sm text-gray-500">Camiseta de Manga Longa</h3>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="w-[250px] group">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="/img/blusa manga longa preta.jpg" alt="Blusa Manga Longa Preta"
+                            class="w-[250px] h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-0 left-0 w-full bg-[#002B0C] text-[#FEF9E7] font-sans font-medium text-xs tracking-wide-label uppercase py-3.5 transition-all duration-300 transform translate-y-full invisible group-hover:visible group-hover:translate-y-0 group-hover:bg-[#002B0C]/90">Ver
+                            Produto</button>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p class="text-[#002B0C] font-bold">Blusa Manga Longa Preta</p>
+                        <h3 class="text-sm text-gray-500">Camiseta de Manga Longa</h3>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="w-[250px] group">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="/img/blusa manga longa preta.jpg" alt="Blusa Manga Longa Preta"
+                            class="w-[250px] h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-0 left-0 w-full bg-[#002B0C] text-[#FEF9E7] font-sans font-medium text-xs tracking-wide-label uppercase py-3.5 transition-all duration-300 transform translate-y-full invisible group-hover:visible group-hover:translate-y-0 group-hover:bg-[#002B0C]/90">Ver
+                            Produto</button>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p class="text-[#002B0C] font-bold">Blusa Manga Longa Preta</p>
+                        <h3 class="text-sm text-gray-500">Camiseta de Manga Longa</h3>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="w-[250px] group">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="/img/blusa manga longa preta.jpg" alt="Blusa Manga Longa Preta"
+                            class="w-[250px] h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-0 left-0 w-full bg-[#002B0C] text-[#FEF9E7] font-sans font-medium text-xs tracking-wide-label uppercase py-3.5 transition-all duration-300 transform translate-y-full invisible group-hover:visible group-hover:translate-y-0 group-hover:bg-[#002B0C]/90">Ver
+                            Produto</button>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p class="text-[#002B0C] font-bold">Blusa Manga Longa Preta</p>
+                        <h3 class="text-sm text-gray-500">Camiseta de Manga Longa</h3>
+                    </div>
+                </div>
+                <!-- Produto 5 -->
+                <div class="w-[250px] group">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="/img/blusa manga longa preta.jpg" alt="Blusa Manga Longa Preta"
+                            class="w-[250px] h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-0 left-0 w-full bg-[#002B0C] text-[#FEF9E7] font-sans font-medium text-xs tracking-wide-label uppercase py-3.5 transition-all duration-300 transform translate-y-full invisible group-hover:visible group-hover:translate-y-0 group-hover:bg-[#002B0C]/90">Ver
+                            Produto</button>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <p class="text-[#002B0C] font-bold">Blusa Manga Longa Preta</p>
+                        <h3 class="text-sm text-gray-500">Camiseta de Manga Longa</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <script>
-        const searchInput = document.getElementById('site-search');
-        const productCards = document.querySelectorAll('main figure');
-
-        if (searchInput) {
-            searchInput.addEventListener('input', () => {
-                const query = searchInput.value.trim().toLowerCase();
-
-                productCards.forEach((card) => {
-                    const text = card.textContent.toLowerCase();
-                    const shouldShow = !query || text.includes(query);
-                    card.style.display = shouldShow ? '' : 'none';
-                });
-            });
-        }
-    </script>
+    <footer>
+        <p class="text-center text-[#002B0C]">&copy; 2026 Eros. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>
